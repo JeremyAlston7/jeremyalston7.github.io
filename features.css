@@ -1,0 +1,329 @@
+/* ------------------FEATURES PAGE------------------ */
+#feature-home
+{
+    padding: 3rem 2rem;
+    max-width: 700px;
+    margin: auto;
+    margin-top: 20rem;
+}
+
+#feature-header
+{
+    border-bottom: 8px solid;
+    border-image: linear-gradient(90deg, #00f0ff, #bf5fff) 1;
+    padding-bottom: 0rem;
+    margin-top: 0rem;
+    width: fit-content;
+}
+
+#wave-text
+{
+    margin-top: 1.5rem;
+    font-size: larger;
+}
+
+#feature-section-header
+{
+    border-bottom: 8px solid;
+    border-image: linear-gradient(90deg, #00f0ff, #bf5fff) 1;
+    padding: 2rem;
+    max-width: 695px;
+    margin: auto;
+    margin-top: 25rem;
+    margin-bottom: 12rem;
+    padding-bottom: 0rem;
+}
+
+#feature-section
+{
+    padding: 0 2rem;
+}
+
+/* ------------------FEATURE CARDS------------------ */
+.feature-group
+{
+    padding: 4px;
+    border-radius: 8px;
+    max-width: 80%;
+    margin: auto;
+    margin-bottom: 4rem;
+    background: rgba(0, 51, 255, 0.3);
+    transition: transform 0.3s ease, opacity 0.7s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.feature-group:hover
+{
+    transform: scale(1.085);
+}
+
+.feature-card-inner
+{
+    background-color: rgb(12, 18, 30);
+    border-radius: 6px;
+    padding: 1.8rem;
+}
+
+.feature-title
+{
+    margin-bottom: 2rem;
+    font-size: 2.3rem;
+}
+
+.feature-description
+{
+    width: 525px;
+}
+
+/* ------------------GRADIENT TEXT/BORDER FEATURE------------------ */
+.gradient-feature-border
+{
+    background: rgba(0, 51, 255, 0.4);
+}
+
+#gradient-list-item
+{
+    background: linear-gradient(90deg, #00f0ff, #bf5fff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#gradient-demo-box 
+{
+    width: 600px;
+    height: 150px;
+    background: linear-gradient(90deg, #00f0ff, #bf5fff);
+    border-radius: 8px;
+    display: flex;
+}
+
+#gradient-card-inner 
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* ------------------WAVE TEXT ANIMATION DEMO------------------ */
+@keyframes wave
+{
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* INTENSITY DIFFERENCES */
+@keyframes wave-low
+{
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes wave-medium
+{
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes wave-high
+{
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-30px); }
+}
+
+.wave-letter
+{
+    display: inline-block;
+    animation: wave 1.2s ease-in-out infinite;
+}
+
+/* SPEED DIFFERENCES */
+.wave-letter-demo-slow
+{
+    display: inline-block;
+    animation: wave 2.3s ease-in-out infinite;
+}
+
+.wave-letter-demo-medium
+{
+    display: inline-block;
+    animation: wave 1.8s ease-in-out infinite;
+}
+
+.wave-letter-demo-fast
+{
+    display: inline-block;
+    animation: wave 1s ease-in-out infinite;
+}
+
+/* INTENSITY DIFFERENCES */
+.wave-letter-demo-low-intense
+{
+    display: inline-block;
+    animation: wave-low 1.8s ease-in-out infinite;
+}
+
+.wave-letter-demo-medium-intense
+{
+    display: inline-block;
+    animation: wave-medium 1.8s ease-in-out infinite;
+}
+
+.wave-letter-demo-high-intense
+{
+    display: inline-block;
+    animation: wave-high 1.8s ease-in-out infinite;
+}
+
+#wave-card-demo
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.wave-text-demo
+{
+    font-size: 1rem;
+    padding: 1rem;
+}
+
+.time-value, .px-value
+{
+    color: rgba(121, 184, 255, 0.9);
+}
+
+.seconds-value, .px-label
+{
+    color: rgba(249, 107, 99, 0.9);
+}
+
+.wave-label-group
+{
+    display: flex;
+    align-items: center;
+    gap: 0rem;
+    margin-bottom: 0.5rem;
+}
+
+.wave-label
+{
+    color: #00f0ff;
+    min-width: 50px;
+}
+
+/* ------------------SLOT MACHINE ANIMATION DEMO------------------ */
+@keyframes slideIn
+{
+    from { transform: translateY(100%); }
+    to { transform: translateY(0%); }
+}
+
+@keyframes slideOut
+{
+    from { transform: translateY(0); }
+    to { transform: translateY(-100%); }
+}
+
+#slot-text-animation-demo
+{
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle;
+}
+
+/* ------------------ANIMATED ORB DEMO------------------ */
+.orb1-demo
+{
+    width: 50px;
+    height: 50px;
+    top: 35%; left: 50%;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 100%);
+    /* filter: blur(0px); */
+    position: absolute;
+    z-index: 0;
+    opacity: 100%;
+    animation: driftDemo 3s ease-in-out infinite alternate;
+}
+
+.orb2-demo
+{
+    width: 50px;
+    height: 50px;
+    top: 60%; left: 50%;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 100%);
+    /* filter: blur(0px); */
+    position: absolute;
+    z-index: 0;
+    opacity: 100%;
+    animation: driftDemo 3s ease-in-out infinite alternate;
+    animation-delay: -2s;
+}
+
+.orb3-demo
+{
+    width: 50px;
+    height: 50px;
+    top: 85%; left: 50%;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 100%);
+    /* filter: blur(0px); */
+    position: absolute;
+    z-index: 0;
+    opacity: 100%;
+    animation: driftDemo 3s ease-in-out infinite alternate;
+    animation-delay: -4s;
+}
+
+@keyframes driftDemo
+{
+    from {transform: translate(0, -50px); }
+    to { transform: translate(430px, -50px);}
+}
+
+/* ------------------PROFICIENCY BAR DEMO------------------ */
+#prof-bar-demo-inner
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#prof-bar-demo-container
+{
+    width: 600px;
+    margin-right: 10rem;
+}
+
+.prof-bar-demo-item
+{
+    margin-bottom: 1rem;
+}
+
+.prof-bar-demo-label
+{
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #e8edf5;
+    font-size: 0.85rem;
+}
+
+.prof-bar-demo-track
+{
+    height: 8px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.prof-bar-demo-fill
+{
+    height: 100%;
+    border-radius: 4px;
+    background: linear-gradient(90deg, #00f0ff, #bf5fff);
+    width: 0%;
+    transition: width 1s ease;
+}

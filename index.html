@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Resume-learningV1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet"/>
+</head>
+
+<body>
+
+<!-- ------------------BACKGROUND BLURED ORBS------------------ -->
+    <div class="orb1"></div>
+    <div class="orb2"></div>
+    <div class="orb3"></div>
+
+<!-- ------------------MOBILE MENU OVERLAY------------------ -->
+    <div id="mobile-menu-overlay"></div>
+
+<!-- ------------------MOBILE MENU PANEL------------------ -->
+    <div id="mobile-menu">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+
+<!-- ------------------NAVIGATION BAR------------------ -->
+    <nav>
+        <span id="nav-title">Interactive Resume</span>
+        
+        <ul id="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <button id="hamburger" aria-label="Open menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+<!-- ------------------HOME SECTION------------------ -->
+    <section id="home" class="reveal">
+        <div id="home-banner-group">
+            <span id="home-banner">Looking for . . <span id="slot-text-animation"></span></span>
+        </div>
+        
+        <h1><span class="gradient-text">J</span>eremy <span class="gradient-text">A</span>lston</h1>
+        <h3>IT & CS Student - Wayne, NJ</h3>
+        <p id="home-text">Building interfaces that feel alive and systems that make sense. Focused on web development, UX design, and the art of making technology approachable, one thoughtful interaction at a time.</p>
+        
+        <div class="typing-container">
+            <span>> /</span><span id="typing-animation"></span><span class="cursor">|</span>
+        </div>
+        
+        <div class="btn-group">
+            <a class="btn" href="#projects">View My Work</a>
+            <a class="btn" href="#contact">Get In Touch</a>
+            <a class="btn" href="features.html">Under the Hood</a>
+        </div>
+
+    </section>
+
+<!-- ------------------SKILLS SECTION------------------ -->
+    <section id="skills">
+        <h2 id="skills-title">Skills</h2>
+
+        <div class="skill-grid">
+            <!-- CARD 1 -->
+            <div class="skill-card reveal">
+                <div class="card-inner">
+                    <span class="card-number">1</span>
+                    <span>⚡</span>
+                    <h3>Frontend Development</h3>
+                    <p>Using languages like HTML, CSS, and JavaScript, I have a strong interest in developing engaging and intuitive interfaces that users of any kind are able to interact with. These interfaces are meant to be interactive, give feedback to the user and fly past being another screen and making the interface and experience for the user.</p>
+                </div>
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="skill-card reveal">
+                <div class="card-inner">
+                    <span class="card-number">2</span>
+                    <span>🛠️</span>
+                    <h3>Backend Development</h3>
+                    <p>I have worked with backend code through my entire career of learning coding. This ranges from taking college level Java courses in my freshman year of highschool to excelling in my current courses at Montclair State University. I have extensive knowledge of languages like Java, Python, C++/C#, and HTML/CSS. Now in college I am furthering my knowledge on more advanced topics like integrating JavaScript into my HTML pages, learning about computer theory and machine learning models.</p>
+                </div>
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="skill-card reveal">
+                <div class="card-inner">
+                    <span class="card-number">3</span>
+                    <span>🎨</span>
+                    <h3>UX / Human-Computer Interaction</h3>
+                    <p>Designing with the intent of usability, accessibility, and engagement at my number one priority. I want the user to feel like they are engaging with the technology not just viewing it. I also believe that any user should be able to interact with the product regardless of anything. I make my interfaces adaptable for everything from screen sizes to accounting for a mobility or dexterity impairment.</p>
+                </div>
+            </div>
+
+            <!-- CARD 4 -->
+            <div class="skill-card reveal">
+                <div class="card-inner">
+                    <span class="card-number">4</span>
+                    <span>🗄️</span>
+                    <h3>Data & Systems</h3>
+                    <p>Using real world data structures, I have done extensive amounts of data analysis throughout my college career. I have analyzed data sets and used that to create Entity Relationship Diagrams. I have used networking software like Wireshark to analyze data through network traffic, and worked using tools like Rstudio to make visual diagrams of data and perform analysis on real life data sets.</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+<!-- ------------------PROFICIENCY BARS------------------ -->
+    <section id="prof-bar-section">
+        <div id="prof-bar-group">
+            <h2>Proficiency</h2>
+            
+            <span class="prof-bar-label">HTML/CSS</span>
+            <div class="track-border">
+                <div data-width="75%"></div>
+            </div>
+
+            <span class="prof-bar-label">JavaScript</span>
+            <div class="track-border">
+                <div data-width="35%"></div>
+            </div>
+
+            <span class="prof-bar-label">PHP</span>
+            <div class="track-border">
+                <div data-width="25%"></div>
+            </div>
+
+            <span class="prof-bar-label">Python</span>
+            <div class="track-border">
+                <div data-width="40%"></div>
+            </div>
+
+            <span class="prof-bar-label">SQL</span>
+            <div class="track-border">
+                <div data-width="45%"></div>
+            </div>
+
+            <span class="prof-bar-label">UX Design</span>
+            <div class="track-border">
+                <div data-width="80%"></div>
+            </div>
+        </div>
+    </section>
+
+<!-- ------------------PROJECTS SECTION------------------ -->
+    <section id="projects">
+        <h2 id="projects-title">Projects</h2>
+        
+        <div class="projects-grid">
+            <!-- CARD 1 -->
+            <div class="projects-card reveal">
+                <div class="card-inner">
+                    <span class="card-number">1</span>
+                    <h3>Bedroom Automation w/ Visual Hand Gestures</h3>
+                    <p>Using libraries like Mediapipe and Fingerpose and combining that with a bit of HTML to create a page that gathers camera data and uses the position of each joint on your fingers to trigger actions on other devices in my room using a mixture of google home, App Scripts, and a google sheets documents to log gestures and when they trigger.</p>
+                    <div class="tag-group">
+                        <span class="project-tags">HTML/CSS</span>
+                        <span class="project-tags">JavaScript</span>
+                        <span class="project-tags">Device Automation</span>
+                        <span class="project-tags">Computer Vision</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="projects-card reveal">
+                <div class="card-inner">
+                    <span class="card-number">2</span>
+                    <h3>Activities Page Redesign</h3>
+                    <p>Redesigned a student activities page featuring a responsive layout, modal image viewer, and modern card-based UI — built from scratch.</p>
+                    <div class="tag-group">
+                        <span class="project-tags">JavaScript</span>
+                        <span class="project-tags">CSS Grid</span>
+                        <span class="project-tags">Modal UI</span>
+                        <span class="project-tags">Responsive</span>
+                    </div>
+                </div>    
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="projects-card reveal">
+                <div class="card-inner">
+                    <span class="card-number">3</span>
+                    <h3>Task Tracker App Concept</h3>
+                    <p>Designed a Prototype of a Reminder App specifically targeted to help people who might have ADHD/ADD. The app specifically targets large tasks and uses API integration with Claude to break down the large task into smaller tasks. Its goal is to make tasks more digestible for the user and helps people with motivational issues with short bursts of serotonin.</p>
+                    <div class="tag-group">
+                        <span class="project-tags">UI/UX Design</span>
+                        <span class="project-tags">App Development</span>
+                        <span class="project-tags">AI Integration</span>
+                        <span class="project-tags">Assistive Technology</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 4 -->
+            <div class="projects-card reveal">
+                <div class="card-inner">
+                    <span class="card-number">4</span>
+                    <h3>Network Topology Study</h3>
+                    <p>Applied textbook protocol formulas and architectural analysis across Computer Networks coursework, modeling real-world packet routing scenarios.</p>
+                    <div class="tag-group">
+                        <span class="project-tags">TCP/IP</span>
+                        <span class="project-tags">Subnetting</span>
+                        <span class="project-tags">Routing</span>
+                        <span class="project-tags">Network Analysis</span>
+                    </div>
+                </div>    
+            </div>
+        </div>
+    </section>
+
+<!-- ------------------ABOUT SECTION------------------ -->
+    <section id="about">
+        <h2 id="about-title">About Me</h2>
+
+        <div class="wai-group reveal">
+            <h3 id="wai-title">Who am I?</h3>
+            <p class="wai-content">My name is Jeremy Alston. I am a senior at Montclair State University and I love working with computers! 
+                My main focus is on hardware and front end design. Talking about hardware I absolutely love working with my hands. 
+                I am a person that needs to be moving around while they work and being able to physically take things apart and put them back together is exactly what helps me stay focused. 
+                Combining that with the technology aspect of computers, I love the logical process that someone has to go through to be able to work on larger scale machines like a set of server racks.</p>
+        </div>
+
+        <div id="about-grid-group">
+            <div>
+                <div class="education-group reveal">
+                    <h3 id="education-title">Education</h3>
+                    <div class="education-tags reveal">
+                        <h4 class="education-subtitle">Wayne Hills Highschool - Wayne, NJ</h4>
+                        <p>2018 - 2022</p>
+                    </div>
+
+                    <div class="education-tags reveal">
+                        <h4 class="education-subtitle">Montclair State University - Montclair, NJ</h4>
+                        <p>Bachelor's Degree in Information Technology</p>
+                        <p>Minor in Computer Science</p>
+                        <p>2022 - 2027</p>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="personal-group reveal">
+                    <h3 id="personal-title">Personal Interests</h3>
+                    <div class="personal-content-group">
+                        <ul>
+                            <li>Video Games</li>
+                            <li>Building Computers</li>
+                            <li>Working on Vehicles</li>
+                            <li>Personal Coding Projects</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- ------------------CONTACT ME SECTION------------------ -->
+    <section id="contact">
+        <div class="contact-header-content reveal">
+            <h4 id="contact-subtitle">Connect With Me!</h4>
+            <h2 id="contact-title">Get In Touch</h2>
+            <p id="contact-text">Looking for internships, collaborations, and new projects.</p>
+        </div>
+
+        <div>
+            <ul class="contact-link-list reveal">
+                <li class="contact-items"><a href="https://www.linkedin.com/feed/">LinkedIn</a></li>
+                <li class="contact-items"><a href="https://github.com">GitHub</a></li>
+                <li class="contact-items"><a href="">Download Resume</a></li>
+            </ul>
+        </div>
+        <div id="copy-email-group">
+            <span id="copy-email">jeremyalston7@gmail.com</span>
+        </div>
+        <span id="copy-confirm">Copied!</span>
+    </section>
+
+<!-- ------------------FOOTER------------------ -->
+    <footer id="footer">Jeremy Alston - March 2026</footer>
+
+<!-- ------------------SCROLL NAVIGATION ARROWS------------------ -->
+    <div id="scroll-nav">
+        <button id="scroll-up" class="scroll-arrow">▲</button>
+        <button id="scroll-down" class="scroll-arrow">▼</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
