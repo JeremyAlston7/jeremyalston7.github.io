@@ -174,7 +174,7 @@ const indexSections =
 const featureSections = 
 [
     '#feature-home', '#feature-section', '#gradient-demo', '#typing-demo', '#slot-demo',
-    '#wave-demo', '#orb-scroll-demo', '#arrows-demo', '#prof-bar-demo'
+    '#wave-demo', '#orb-scroll-demo', '#prof-bar-demo'
 ];
 
 const sections = document.querySelector('#home') 
