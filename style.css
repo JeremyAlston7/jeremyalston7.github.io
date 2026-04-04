@@ -185,7 +185,7 @@ body
     background-color: #00d9ff;
     filter: blur(80px);
     position: fixed;
-    z-index: 0;
+    z-index: -1;
     opacity: 100%;
     animation: drift 10s ease-in-out infinite alternate;
 }
@@ -199,7 +199,7 @@ body
     background-color: rgb(255, 0, 0);
     filter: blur(80px);
     position: fixed;
-    z-index: 0;
+    z-index: -1;
     opacity: 100%;
     animation: drift 10s ease-in-out infinite alternate;
 }
@@ -213,7 +213,7 @@ body
     background-color: magenta;
     filter: blur(80px);
     position: fixed;
-    z-index: 0;
+    z-index: -1;
     opacity: 100%;
     animation: drift 10s ease-in-out infinite alternate;
 }
@@ -522,6 +522,7 @@ h3
 #education-title
 {
     margin-bottom: 1rem;
+    z-index: 1;
 }
 
 .education-tags
@@ -531,6 +532,8 @@ h3
     border-radius: 8px;
     border: 2px solid rgba(0, 51, 255, 0.3);
     margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
 }
 
 .education-subtitle
@@ -559,6 +562,8 @@ h3
     border-radius: 8px;
     border: 2px solid rgba(0, 51, 255, 0.3);
     margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
 }
 
 .personal-content
@@ -676,7 +681,7 @@ h3
 /* ------------------FOOTER------------------ */
 #footer
 {
-    border-top: 2px solid rgba(0, 132, 255, 0.405);
+    border-top: 2px solid rgba(0, 132, 255, 0.792);
     padding: 1rem 2rem;
     text-align: center;
     margin-top: 13rem;

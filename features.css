@@ -19,6 +19,7 @@
 #wave-text
 {
     margin-top: 1.5rem;
+    margin-bottom: 18rem;
     font-size: larger;
 }
 
@@ -36,17 +37,34 @@
 
 #feature-section
 {
+    padding: 0;
+}
+
+/* ------------------FEATURE CARDS GRID------------------ */
+#feature-grid
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
     padding: 0 2rem;
 }
 
-/* ------------------FEATURE CARDS------------------ */
+.feature-full
+{
+    grid-column: span 2;
+}
+
+.feature-half
+{
+    grid-column: span 1;
+}
+
 .feature-group
 {
     padding: 4px;
     border-radius: 8px;
-    max-width: 80%;
-    margin: auto;
-    margin-bottom: 4rem;
+    max-width: 100%;
+    margin: 0;
     background: rgba(0, 51, 255, 0.3);
     transition: transform 0.3s ease, opacity 0.7s ease;
     position: relative;
@@ -63,6 +81,14 @@
     background-color: rgb(12, 18, 30);
     border-radius: 6px;
     padding: 1.8rem;
+    height: 100%;
+}
+
+.half-card-demo
+{
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(0, 240, 255, 0.1);
 }
 
 .feature-title
@@ -113,19 +139,6 @@
     50% { transform: translateY(-10px); }
 }
 
-/* INTENSITY DIFFERENCES */
-@keyframes wave-low
-{
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-}
-
-@keyframes wave-medium
-{
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-20px); }
-}
-
 @keyframes wave-high
 {
     0%, 100% { transform: translateY(0); }
@@ -138,38 +151,6 @@
     animation: wave 1.2s ease-in-out infinite;
 }
 
-/* SPEED DIFFERENCES */
-.wave-letter-demo-slow
-{
-    display: inline-block;
-    animation: wave 2.3s ease-in-out infinite;
-}
-
-.wave-letter-demo-medium
-{
-    display: inline-block;
-    animation: wave 1.8s ease-in-out infinite;
-}
-
-.wave-letter-demo-fast
-{
-    display: inline-block;
-    animation: wave 1s ease-in-out infinite;
-}
-
-/* INTENSITY DIFFERENCES */
-.wave-letter-demo-low-intense
-{
-    display: inline-block;
-    animation: wave-low 1.8s ease-in-out infinite;
-}
-
-.wave-letter-demo-medium-intense
-{
-    display: inline-block;
-    animation: wave-medium 1.8s ease-in-out infinite;
-}
-
 .wave-letter-demo-high-intense
 {
     display: inline-block;
@@ -178,39 +159,13 @@
 
 #wave-card-demo
 {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: block;
 }
 
 .wave-text-demo
 {
     font-size: 1rem;
     padding: 1rem;
-}
-
-.time-value, .px-value
-{
-    color: rgba(121, 184, 255, 0.9);
-}
-
-.seconds-value, .px-label
-{
-    color: rgba(249, 107, 99, 0.9);
-}
-
-.wave-label-group
-{
-    display: flex;
-    align-items: center;
-    gap: 0rem;
-    margin-bottom: 0.5rem;
-}
-
-.wave-label
-{
-    color: #00f0ff;
-    min-width: 50px;
 }
 
 /* ------------------SLOT MACHINE ANIMATION DEMO------------------ */
@@ -234,54 +189,31 @@
 }
 
 /* ------------------ANIMATED ORB DEMO------------------ */
+.orb-demo-container
+{
+    position: relative;
+    height: 100px;
+    margin-top: 1rem;
+}
+
 .orb1-demo
 {
     width: 50px;
     height: 50px;
-    top: 35%; left: 50%;
+    top: 50%;
+    left: 10%;
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 100%);
-    /* filter: blur(0px); */
     position: absolute;
     z-index: 0;
     opacity: 100%;
     animation: driftDemo 3s ease-in-out infinite alternate;
-}
-
-.orb2-demo
-{
-    width: 50px;
-    height: 50px;
-    top: 60%; left: 50%;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 100%);
-    /* filter: blur(0px); */
-    position: absolute;
-    z-index: 0;
-    opacity: 100%;
-    animation: driftDemo 3s ease-in-out infinite alternate;
-    animation-delay: -2s;
-}
-
-.orb3-demo
-{
-    width: 50px;
-    height: 50px;
-    top: 85%; left: 50%;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 100%);
-    /* filter: blur(0px); */
-    position: absolute;
-    z-index: 0;
-    opacity: 100%;
-    animation: driftDemo 3s ease-in-out infinite alternate;
-    animation-delay: -4s;
 }
 
 @keyframes driftDemo
 {
-    from {transform: translate(0, -50px); }
-    to { transform: translate(430px, -50px);}
+    from { transform: translate(0, -50px); }
+    to { transform: translate(430px, -50px); }
 }
 
 /* ------------------PROFICIENCY BAR DEMO------------------ */
@@ -326,4 +258,107 @@
     background: linear-gradient(90deg, #00f0ff, #bf5fff);
     width: 0%;
     transition: width 1s ease;
+}
+
+/* ------------------MEDIA QUERIES------------------ */
+@media (max-width: 768px)
+{
+    /* FEATURE HOME SECTION */
+    #feature-home
+    {
+        margin-top: 8rem;
+        padding: 2rem 1.5rem;
+    }
+
+    #feature-section-header
+    {
+        margin-top: 6rem;
+        margin-bottom: 4rem;
+        padding: 1rem 1.5rem;
+    }
+
+    /* COLLAPSE GRID TO SINGLE COLUMN */
+    #feature-grid
+    {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+        gap: 1.5rem;
+    }
+
+    /* ALL CARDS FULL WIDTH ON MOBILE */
+    .feature-full,
+    .feature-half
+    {
+        grid-column: span 1;
+    }
+
+    .feature-group:hover
+    {
+        transform: none;
+    }
+
+    /* FIXED WIDTH DESCRIPTIONS BECOME FLUID */
+    .feature-description
+    {
+        width: 100%;
+    }
+
+    /* FEATURE TITLE SMALLER ON MOBILE */
+    .feature-title
+    {
+        font-size: 1.6rem;
+    }
+
+    /* GRADIENT CARD - STACK VERTICALLY */
+    #gradient-card-inner
+    {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    #gradient-demo-box
+    {
+        width: 100%;
+        height: 100px;
+    }
+
+    /* PROF BAR DEMO - STACK VERTICALLY */
+    #prof-bar-demo-inner
+    {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #prof-bar-demo-container
+    {
+        width: 100%;
+        margin-right: 0;
+        margin-top: 1.5rem;
+    }
+
+    /* ORB DEMO - CONSTRAIN DRIFT */
+    @keyframes driftDemo
+    {
+        from { transform: translate(0, -50px); }
+        to { transform: translate(150px, -50px); }
+    }
+
+    .wave-letter-demo-high-intense
+    {
+        font-size: 0.86rem;
+    }
+
+    /* HIDE SCROLL ARROWS */
+    #scroll-nav
+    {
+        display: none;
+    }
+}
+
+@media (max-width: 389px)
+{
+    .wave-letter-demo-high-intense
+    {
+        font-size: 0.76rem;
+    }
 }

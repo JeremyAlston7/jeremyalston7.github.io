@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Features-Page</title>
+    <title>Interactive Resume - Features</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="features.css">
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet"/>
@@ -15,9 +17,11 @@
     <div class="orb2"></div>
     <div class="orb3"></div>
 
-<!-- ------------------NAVIGATION BAR------------------ -->
-    <nav>
-        <span id="nav-title">Interactive Resume</span>
+<!-- ------------------MOBILE MENU OVERLAY------------------ -->
+    <div id="mobile-menu-overlay"></div>
+
+<!-- ------------------MOBILE MENU PANEL------------------ -->
+    <div id="mobile-menu">
         <ul>
             <li><a href="index.html#home">Home</a></li>
             <li><a href="index.html#skills">Skills</a></li>
@@ -25,6 +29,25 @@
             <li><a href="index.html#about">About</a></li>
             <li><a href="index.html#contact">Contact</a></li>
         </ul>
+    </div>
+
+<!-- ------------------NAVIGATION BAR------------------ -->
+    <nav>
+        <span id="nav-title">Interactive Resume</span>
+
+        <ul id="nav-links">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#skills">Skills</a></li>
+            <li><a href="index.html#projects">Projects</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+
+        <button id="hamburger" aria-label="Open menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </nav>
 
 <!-- ------------------MAIN HEADER------------------ -->
@@ -36,10 +59,13 @@
 </section>
 
 <section id="feature-section">
-    <h1 id="feature-section-header" class="reveal">Features & Details</h1>
+    <!-- <h1 id="feature-section-header" class="reveal">Features & Details</h1> -->
 
-    <!-- Gradient Border Tracking -->
-    <div id="gradient-demo" class="gradient-feature-border feature-group reveal">
+    <!-- ------------------FEATURE CARDS GRID------------------ -->
+    <div id="feature-grid">
+
+    <!-- Gradient Border Tracking - FULL WIDTH -->
+    <div id="gradient-demo" class="gradient-feature-border feature-group feature-full reveal">
         <div class="feature-card-inner" id="gradient-card-inner">
             <div>
                 <h1 class="feature-title">
@@ -57,8 +83,8 @@
         </div>
     </div>
 
-    <!-- Typing String Animation -->
-    <div id="typing-demo" class="feature-group reveal">
+    <!-- Typing String Animation - HALF WIDTH -->
+    <div id="typing-demo" class="feature-group feature-half reveal">
         <div class="feature-card-inner">
             <h1 class="feature-title">Typing & Backspacing Animation</h1>
             <p class="feature-description">
@@ -68,15 +94,14 @@
                 a faster speed. When the string is fully deleted, the index moves to the next string and 
                 the cycle repeats.
             </p>
-            
-            <div>
+            <div class="half-card-demo">
                 <span id="typing-animation-demo"></span><span class="cursor">|</span>
             </div>
         </div>
     </div>
 
-    <!-- Slot Machine Animation -->
-    <div id="slot-demo" class="feature-group reveal">
+    <!-- Slot Machine Animation - HALF WIDTH -->
+    <div id="slot-demo" class="feature-group feature-half reveal">
         <div class="feature-card-inner">
             <h1 class="feature-title">Slot Machine Animation</h1>
             <p class="feature-description">
@@ -85,64 +110,30 @@
                 short delay, the text is updated and a slideIn animation plays from below, creating the 
                 illusion of a slot machine rolling to the next value.
             </p>
-
-            <div>
+            <div class="half-card-demo">
                 <span>Looking for . . . <span id="slot-text-animation-demo"></span></span>
             </div>
         </div>
     </div>
 
-    <!-- Text Wave Animation -->
-    <div id="wave-demo" class="feature-group reveal">
-        <div id="wave-card-demo" class="feature-card-inner">
-            <div>
-                <h1 class="feature-title">Wave Text Animation</h1>
-                <p class="feature-description">
-                    JavaScript splits the text content into individual characters and wraps each one in its 
-                    own span element. The same CSS keyframe animation is applied to every span, but each one 
-                    has a slightly larger animation-delay than the previous one. This staggered delay creates 
-                    a smooth ripple wave effect across the full line of text.
-                </p>
-            </div>
-
-            <div>
-                <div class="wave-label-group">
-                    <span><span class="time-value">2.3</span><span class="seconds-value">s</span></span>
-                    <p id="wave-text-demo-slow" class="wave-text-demo">Here is a slow speed wave</p>
-                </div>
-                
-                <div class="wave-label-group">
-                    <span><span class="time-value">1.8</span><span class="seconds-value">s</span></span>
-                    <p id="wave-text-demo-medium" class="wave-text-demo">Here is a medium speed wave</p>
-                </div>
-                
-                <div class="wave-label-group">
-                    <span><span class="time-value">1</span><span class="seconds-value">s</span></span>
-                    <p id="wave-text-demo-fast" class="wave-text-demo">Here is a fast speed wave</p>
-                </div>
-            </div>
-
-            <div>
-                <div class="wave-label-group">
-                    <span><span class="px-value">-10</span><span class="px-label">px</span></span>
-                    <p id="wave-demo-low-intense" class="wave-text-demo">Here is a low intensity wave</p>
-                </div>
-
-                <div class="wave-label-group">
-                    <span><span class="px-value">-20</span><span class="px-label">px</span></span>
-                    <p id="wave-demo-medium-intense" class="wave-text-demo">Here is a medium intensity wave</p>
-                </div>
-
-                <div class="wave-label-group">
-                    <span><span class="px-value">-30</span><span class="px-label">px</span></span>
-                    <p id="wave-demo-high-intense" class="wave-text-demo">Here is a high intensity wave</p>
-                </div>
+    <!-- Text Wave Animation - HALF WIDTH -->
+    <div id="wave-demo" class="feature-group feature-half reveal">
+        <div class="feature-card-inner">
+            <h1 class="feature-title">Wave Text Animation</h1>
+            <p class="feature-description">
+                JavaScript splits the text content into individual characters and wraps each one in its 
+                own span element. The same CSS keyframe animation is applied to every span, but each one 
+                has a slightly larger animation-delay than the previous one. This staggered delay creates 
+                a smooth ripple wave effect across the full line of text.
+            </p>
+            <div class="half-card-demo">
+                <p id="wave-demo-high-intense" class="wave-text-demo">Wave text animation</p>
             </div>
         </div>
     </div>
 
-    <!-- Animated Orb Background -->
-    <div id="orb-scroll-demo" class="feature-group reveal">
+    <!-- Animated Orb Background - HALF WIDTH -->
+    <div id="orb-scroll-demo" class="feature-group feature-half reveal">
         <div class="feature-card-inner">
             <h1 class="feature-title">Animated Orb Background</h1>
             <p class="feature-description">
@@ -152,31 +143,14 @@
                 direction. The alternate keyword reverses the animation each cycle, making the orbs 
                 drift back and forth smoothly forever.
             </p>
-
-            <div>
+            <div class="half-card-demo orb-demo-container">
                 <div class="orb1-demo"></div>
-                <div class="orb2-demo"></div>
-                <div class="orb3-demo"></div>
             </div>
         </div>
     </div>
 
-    <!-- Navigation Scroll Arrows -->
-    <!-- <div class="feature-group reveal">
-        <div class="feature-card-inner">
-            <h1 class="feature-title">Navigation Scroll Arrows</h1>
-            <p class="feature-description">
-                Two fixed position buttons sit in the bottom right corner of the page. JavaScript 
-                stores an array of section IDs and tracks which section is currently active using an 
-                index variable. When the up or down arrow is clicked, the index increments or 
-                decrements and scrollIntoView is called on the corresponding section element, using 
-                the browser's built in smooth scroll behavior.
-            </p>
-        </div>
-    </div> -->
-
-    <!-- Proficiency Bars Animation -->
-    <div class="feature-group reveal">
+    <!-- Proficiency Bars Animation - FULL WIDTH -->
+    <div class="feature-group feature-full reveal">
         <div class="feature-card-inner" id="prof-bar-demo-inner">
             <div>
                 <h1 class="feature-title">Proficiency Bars Animation</h1>
@@ -223,6 +197,8 @@
             </div>
         </div>
     </div>
+
+    </div><!-- end feature-grid -->
 </section>
 
 <!-- ------------------FOOTER------------------ -->

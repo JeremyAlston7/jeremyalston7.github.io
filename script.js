@@ -131,21 +131,45 @@ if(copyEmail)
 const cards = document.querySelectorAll('.skill-card, .projects-card, .gradient-feature-border, #gradient-demo-box');
 if(cards.length > 0)
 {
-    cards.forEach(function(card)
+    const isTouchDevice = window.matchMedia('(pointer: coarse)').matches;
+
+    function updateMobileGradients()
     {
-        card.addEventListener('mousemove', function(e)
+        const viewportCenterX = window.innerWidth / 2;
+        const viewportCenterY = window.innerHeight / 2;
+
+        cards.forEach(function(card)
         {
             const rect = card.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
+            const x = viewportCenterX - rect.left;
+            const y = viewportCenterY - rect.top;
             card.style.background = `radial-gradient(circle at ${x}px ${y}px, #00f0ff, #bf5fff 40%, transparent 1200px)`;
         });
+    }
 
-        card.addEventListener('mouseleave', function()
+    if(isTouchDevice)
+    {
+        updateMobileGradients();
+        window.addEventListener('scroll', updateMobileGradients);
+    }
+    else
+    {
+        cards.forEach(function(card)
         {
-            card.style.background = 'rgba(0, 51, 255, 0.3)';
+            card.addEventListener('mousemove', function(e)
+            {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                card.style.background = `radial-gradient(circle at ${x}px ${y}px, #00f0ff, #bf5fff 40%, transparent 1200px)`;
+            });
+
+            card.addEventListener('mouseleave', function()
+            {
+                card.style.background = 'rgba(0, 51, 255, 0.3)';
+            });
         });
-    });
+    }
 }
 
 // -------------------WAVE TEXT ANIMATION-------------------
@@ -371,88 +395,6 @@ if(slotDemo)
 }
 
 // -------------------WAVE TEXT ANIMATION DEMO-------------------
-
-// SLOW SPEED
-const waveTextDemoSlow = document.getElementById('wave-text-demo-slow');
-if(waveTextDemoSlow) 
-{
-    const letters = waveTextDemoSlow.textContent.split('');
-    waveTextDemoSlow.textContent = '';
-    letters.forEach(function(letter, index) 
-    {
-        const span = document.createElement('span');
-        span.textContent = letter === ' ' ? '\u00A0' : letter;
-        span.classList.add('wave-letter-demo-slow');
-        span.style.animationDelay = (index * 0.05) + 's';
-        waveTextDemoSlow.appendChild(span);
-    });
-}
-
-// MEDIUM SPEED
-const waveTextDemoMedium = document.getElementById('wave-text-demo-medium');
-if(waveTextDemoMedium) 
-{
-    const letters = waveTextDemoMedium.textContent.split('');
-    waveTextDemoMedium.textContent = '';
-    letters.forEach(function(letter, index) 
-    {
-        const span = document.createElement('span');
-        span.textContent = letter === ' ' ? '\u00A0' : letter;
-        span.classList.add('wave-letter-demo-medium');
-        span.style.animationDelay = (index * 0.05) + 's';
-        waveTextDemoMedium.appendChild(span);
-    });
-}
-
-// FAST SPEED
-const waveTextDemoFast = document.getElementById('wave-text-demo-fast');
-if(waveTextDemoFast) 
-{
-    const letters = waveTextDemoFast.textContent.split('');
-    waveTextDemoFast.textContent = '';
-    letters.forEach(function(letter, index) 
-    {
-        const span = document.createElement('span');
-        span.textContent = letter === ' ' ? '\u00A0' : letter;
-        span.classList.add('wave-letter-demo-fast');
-        span.style.animationDelay = (index * 0.05) + 's';
-        waveTextDemoFast.appendChild(span);
-    });
-}
-
-// LOW INTENSITY
-const waveTextDemoLowIntense = document.getElementById('wave-demo-low-intense');
-if(waveTextDemoLowIntense) 
-{
-    const letters = waveTextDemoLowIntense.textContent.split('');
-    waveTextDemoLowIntense.textContent = '';
-    letters.forEach(function(letter, index) 
-    {
-        const span = document.createElement('span');
-        span.textContent = letter === ' ' ? '\u00A0' : letter;
-        span.classList.add('wave-letter-demo-low-intense');
-        span.style.animationDelay = (index * 0.05) + 's';
-        waveTextDemoLowIntense.appendChild(span);
-    });
-}
-
-// MEDIUM INTENSITY
-const waveTextDemoMediumIntense = document.getElementById('wave-demo-medium-intense');
-if(waveTextDemoMediumIntense) 
-{
-    const letters = waveTextDemoMediumIntense.textContent.split('');
-    waveTextDemoMediumIntense.textContent = '';
-    letters.forEach(function(letter, index) 
-    {
-        const span = document.createElement('span');
-        span.textContent = letter === ' ' ? '\u00A0' : letter;
-        span.classList.add('wave-letter-demo-medium-intense');
-        span.style.animationDelay = (index * 0.05) + 's';
-        waveTextDemoMediumIntense.appendChild(span);
-    });
-}
-
-// HIGH INTENSITY
 const waveTextDemoHighIntense = document.getElementById('wave-demo-high-intense');
 if(waveTextDemoHighIntense) 
 {
