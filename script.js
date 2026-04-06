@@ -31,7 +31,7 @@ if(typingEl)
         'IT Major & Computer Science Minor',
         'Frontend Developer & UX Designer',
         'Hardware & Systems Enthusiast',
-        'Driven by Curiosity, Code, & Something New'
+        'Driven by Curiosity, Code, & Learning Something New'
     ];
 
     let lineIndex = 0;
@@ -131,7 +131,7 @@ if(copyEmail)
 const cards = document.querySelectorAll('.skill-card, .projects-card, .gradient-feature-border, #gradient-demo-box');
 if(cards.length > 0)
 {
-    const isTouchDevice = window.matchMedia('(pointer: coarse)').matches;
+    const isTouchDevice = !window.matchMedia('(any-pointer: fine)').matches;
 
     function updateMobileGradients()
     {
