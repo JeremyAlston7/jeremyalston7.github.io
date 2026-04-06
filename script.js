@@ -128,7 +128,7 @@ if(copyEmail)
 }
 
 // -------------------MOUSE TRACKING GRADIENT-------------------
-const cards = document.querySelectorAll('.skill-card, .projects-card, .gradient-feature-border, #gradient-demo-box');
+const cards = document.querySelectorAll('.skill-card, .projects-card, .gradient-feature-border, #gradient-demo-box, .wai-group, .education-tags, .personal-content-group, .contact-items, #copy-email-group');
 if(cards.length > 0)
 {
     const isTouchDevice = !window.matchMedia('(any-pointer: fine)').matches;
@@ -438,4 +438,12 @@ if(profBarDemoFills.length > 0)
 
         setTimeout(animateBar, i * 400);
     });
+}
+
+// -------------------VERSION NUMBER-------------------
+const VERSION = 'V1.4';
+const footerEl = document.getElementById('footer');
+if(footerEl)
+{
+    footerEl.textContent = `Jeremy Alston - April 2026 - ${VERSION}`;
 }

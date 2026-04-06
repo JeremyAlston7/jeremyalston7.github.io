@@ -59,7 +59,7 @@
     grid-column: span 1;
 }
 
-.feature-group
+.feature-group, .feature-group-large
 {
     padding: 4px;
     border-radius: 8px;
@@ -74,6 +74,11 @@
 .feature-group:hover
 {
     transform: scale(1.085);
+}
+
+.feature-group-large:hover
+{
+    transform: scale(1.05);
 }
 
 .feature-card-inner

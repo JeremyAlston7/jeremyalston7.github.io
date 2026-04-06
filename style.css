@@ -624,7 +624,7 @@ h3
 {
     transform: scale(1.085);
     z-index: 2;
-    border: 2px solid rgba(0, 132, 255, 0.522);
+    border: 0px solid rgba(0, 132, 255, 0.522);
     background-color: rgb(12, 18, 30);
 }
 
@@ -658,7 +658,7 @@ h3
 {
     transform: scale(1.085);
     z-index: 2;
-    border: 2px solid rgba(0, 132, 255, 0.522);
+    border: 0px solid rgba(0, 132, 255, 0.522);
     background-color: rgb(12, 18, 30);
 }
 
@@ -749,6 +749,47 @@ h3
     border-color: rgba(0, 240, 255, 0.8);
     background: rgba(0, 240, 255, 0.1);
     transform: scale(1.1);
+}
+
+/* ------------------GRADIENT BORDER ELEMENTS------------------ */
+.wai-group, .education-tags, .personal-content-group, .contact-items, #copy-email-group
+{
+    padding: 2px;
+    background: rgba(0, 51, 255, 0.3);
+    border: none;
+    position: relative;
+}
+
+.education-tags:hover, .personal-content-group:hover
+{
+    transform: scale(1.085);
+    transition: transform 0.3s ease, z-index 0.3s;
+    position: relative;
+    z-index: 2;
+}
+
+.wai-group:hover
+{
+    transform: scale(1.05);
+    transition: transform 0.3s ease, z-index 0.3s;
+    position: relative;
+    z-index: 2;
+}
+
+.grad-inner-card
+{
+    background-color: rgb(12, 18, 30);
+    border-radius: 6px;
+    padding: 1rem;
+    height: 100%;
+}
+
+.grad-inner-contact
+{
+    background-color: rgb(12, 18, 30);
+    border-radius: 6px;
+    padding: 8px;
+    height: 100%;
 }
 
 /* ------------------MEDIA QUERIES AND SCREEN SIZING------------------ */
@@ -858,7 +899,10 @@ h3
     .projects-card:hover,
     .btn:hover,
     .contact-items:hover,
-    #copy-email-group:hover
+    #copy-email-group:hover, 
+    .wai-group:hover, 
+    .education-tags:hover, 
+    .personal-content-group:hover
     {
         transform: none;
     }
