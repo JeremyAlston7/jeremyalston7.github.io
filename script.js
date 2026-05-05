@@ -441,9 +441,9 @@ if(profBarDemoFills.length > 0)
 }
 
 // -------------------VERSION NUMBER-------------------
-const VERSION = 'V1.4';
+const VERSION = 'V1.5';
 const footerEl = document.getElementById('footer');
 if(footerEl)
 {
-    footerEl.textContent = `Jeremy Alston - April 2026 - ${VERSION}`;
+    footerEl.textContent = `Jeremy Alston - May 2026 - ${VERSION}`;
 }
